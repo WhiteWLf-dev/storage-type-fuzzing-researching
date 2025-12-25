@@ -1,4 +1,4 @@
-//./exp3_2 /mnt/ramdisk/exp3_2/inputs/ # exp3_2 dir on RAM
+//./exp3_2 -fork=1 -ignore_crashes=1 /mnt/ramdisk/exp3_2/inputs/ # exp3_2 dir on RAM
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
