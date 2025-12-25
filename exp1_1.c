@@ -1,4 +1,4 @@
-//afl-fuzz -s 0 -i inputs -o /mnt/ramdisk/out1_3 -- ./exp1_1
+//afl-fuzz -s 0 -i inputs -o /mnt/ramdisk/out1_1 -- ./exp1_1
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
       ssize_t len = __AFL_FUZZ_TESTCASE_LEN;
 
       char filename[256];
-      sprintf(filename, "/mnt/ramdisk/exp1cfg.%d", getpid()); //temporary file
+      sprintf(filename, "/mnt/ramdisk/exp1cfg.%d", getpid()); //temporary file (on RAM)
 
       FILE *fp = fopen(filename, "wb");
       if (!fp) {
